@@ -9,6 +9,7 @@
         }
         body {
             margin: 0;
+            padding-bottom: 40px;
         }
         .my-name {
             color: tomato;
@@ -23,6 +24,18 @@
             border-radius: 4px;
             color: rgb(233, 233, 233);
             font-weight: bold;
+            cursor: pointer;
+        }
+        .my-pic {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+        }
+        .about-content {
+            display: flex;
+        }
+        p {
+            margin: 0;
         }
     </style>
 </head>
@@ -33,6 +46,14 @@
         </h1>
         <h3 class="sub-title">Full Stack Developer</h3>
         <button class="contact-btn">Contact Me</button>
+    </div>
+
+    <div class="about-me">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <img src="me.jpeg" class="my-pic"/>
+            <p>Experienced Full Stack Developer proficient in React JS, Spring Boot, Node JS, AWS, React Native, and Flask, with a passion for exploring new technologies and passionate about exploring the world.</p>
+        </div>
     </div>
 
 </body>
