@@ -4,8 +4,18 @@
     <style>
         .intro {
             background: gray;
-            padding: 20px;
+            padding: 5px 20px;
+            padding-bottom: 30px;
             text-align: center;
+        }
+        .nav-list {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        .nav-items {
+            margin: 5px 15px;
+            padding: 5px 10px;
         }
         body {
             margin: 0;
@@ -27,20 +37,34 @@
             cursor: pointer;
         }
         .my-pic {
-            height: 50px;
-            width: 50px;
-            border-radius: 50px;
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+        }
+        .about-me {
+            padding: 30px 160px;
         }
         .about-content {
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
         p {
             margin: 0;
+        }
+        .about-me-text {
+            padding: 10px 20px;
+            font-size: 25px;
         }
     </style>
 </head>
 <body>
     <div class="intro">
+        <ul class="nav-list">
+            <li class="nav-items">Home</li>
+            <li class="nav-items">About</li>
+            <li class="nav-items">Portfolio</li>
+        </ul>
         <h1>Hi I'm 
             <span class="my-name">Ram Sankar R</span>
         </h1>
@@ -52,7 +76,7 @@
         <h1>About Me</h1>
         <div class="about-content">
             <img src="me.jpeg" class="my-pic"/>
-            <p>Experienced Full Stack Developer proficient in React JS, Spring Boot, Node JS, AWS, React Native, and Flask, with a passion for exploring new technologies and passionate about exploring the world.</p>
+            <p class="about-me-text">Experienced Full Stack Developer proficient in React JS, Spring Boot, Node JS, AWS, React Native, and Flask, with a passion for exploring new technologies and passionate about exploring the world.</p>
         </div>
     </div>
 
