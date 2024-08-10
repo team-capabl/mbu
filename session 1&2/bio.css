@@ -38,8 +38,9 @@ body {
     width: 100px;
     border-radius: 100px;
 }
-.about-me {
-    padding: 30px 160px;
+.section-container {
+    padding: 50px 200px;
+    text-align: center;
 }
 .about-content {
     display: flex;
@@ -52,4 +53,18 @@ p {
 .about-me-text {
     padding: 10px 20px;
     font-size: 25px;
+}
+.logo {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.projects {
+    border: 1px solid gray;
+    width: 50%;
+}
+.my-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
