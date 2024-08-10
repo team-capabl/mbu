@@ -1,0 +1,55 @@
+.intro {
+    background: tomato;
+    padding: 5px 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.nav-items {
+    margin: 5px 15px;
+    padding: 5px 10px;
+}
+body {
+    margin: 0;
+    padding-bottom: 40px;
+    font-family: monospace;
+}
+.my-name {
+    color: #5c5c5c;
+}
+.sub-title {
+    margin-top: -10px;
+}
+.contact-btn {
+    background-color: #5c5c5c;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: rgb(233, 233, 233);
+    font-weight: bold;
+    cursor: pointer;
+}
+.my-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+.about-me {
+    padding: 30px 160px;
+}
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    margin: 0;
+}
+.about-me-text {
+    padding: 10px 20px;
+    font-size: 25px;
+}
