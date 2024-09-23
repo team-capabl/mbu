@@ -3,7 +3,6 @@ let numToFind = 7;
 let isFound = false;
 
 for (let i = 0; i < arr.length; i++) {
-    console.log("counter = " + i)
     if (arr[i] == numToFind) {
         isFound = true
         console.log(numToFind + " is present inside array");
