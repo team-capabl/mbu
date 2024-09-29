@@ -135,4 +135,3 @@ restaurant["Water Bottle"] = "New company";
 // Dot Notation
 restaurant.waterBottle = "New company";  
 // can't write restaurant.water Bottle , it will throw error
-
