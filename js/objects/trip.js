@@ -104,7 +104,7 @@ let restaurant = {
     name: "Campus Tales",
     location: "Near mbu college",
     menu: ["Spring Potato","Chicken","Paneer","Dosa"],
-    rating: 4.5
+    rating: 4.5,
 }
 
 // Printing restaurant object
@@ -127,3 +127,11 @@ restaurant["cooler"] = "whirlphool";
 
 // assigning using dynamic key
 restaurant[thing] = company;
+
+
+// Bracket Notation
+restaurant["Water Bottle"] = "New company";
+
+// Dot Notation
+restaurant.waterBottle = "New company";  
+// can't write restaurant.water Bottle , it will throw error
