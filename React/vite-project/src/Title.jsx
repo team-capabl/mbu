@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 function Title(props) {
     return (
         <h1>
