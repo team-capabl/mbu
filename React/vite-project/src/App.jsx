@@ -18,6 +18,7 @@
 
 import Counter from "./Counter";
 import CounterWithState from "./CounterWithState";
+import ProductsList from "./ProductsList";
 import TaskCreator from "./TaskCreator";
 // import ProfileCard from "./ProfileCard";
 
@@ -36,7 +37,9 @@ function App() {
       {/* <Counter /> *}
       <CounterWithState />
       {/* <TaskCreator /> */}
-      <CounterWithState />
+      {/* <CounterWithState /> */}
+
+      <ProductsList />
     </>
   );
 }
