@@ -1,9 +1,7 @@
-//? What is an API ?
-
 import { useEffect, useState } from "react";
 import { getProducts } from "./api";
-
-//? How to fetch api
+import { ProductCard } from "./ProductCard/ProductCard";
+import { Input } from "./components/ui/input";
 
 const ProductsList = () => {
   const [products, setProducts] = useState([]);
@@ -18,26 +16,36 @@ const ProductsList = () => {
     fetchProductsData();
   }, []); //Component Did Mount
 
-  console.log(search)
+  console.log(search);
 
   const filteredProducts = products.filter((product) => {
     return product.title.includes(search);
-  })
+  });
 
   return (
     <>
-      <input
+      <Input
+        autoFocus
+        className="my-2 mx-auto w-1/2 h-10"
         placeholder="Search Products"
         value={search}
         onChange={(e) => {
           setSearch(e.target.value);
         }}
       />
-      <ul>
+
+      <div className="grid grid-cols-5 gap-4 p-2">
         {filteredProducts.map((product) => {
-          return <li key={product.id}>{product.title}</li>;
+          return (
+            <ProductCard
+              key={product.id}
+              imageUrl={product.image}
+              price={product.price}
+              title={product.title}
+            />
+          );
         })}
-      </ul>
+      </div>
     </>
   );
 };
