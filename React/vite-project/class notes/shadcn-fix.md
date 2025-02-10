@@ -1,7 +1,3 @@
-Here’s the reformatted version:  
-
----
-
 ### Steps to Fix and Install Shadcn library properly
 
 #### 1. Update `vite.config.js`  
