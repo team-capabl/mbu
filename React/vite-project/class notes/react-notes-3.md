@@ -1,5 +1,7 @@
 ### **Detailed Notes on `useEffect` in React**
 
+[YouTube Tutorial - `useEffect` in React](https://youtu.be/0ZJgIjIuY7U?si=7zcKOdq01ZnsvbT1)
+
 `useEffect` is a React Hook that lets you perform side effects in function components. It runs after the component is rendered and has two key use cases:
 
 1. **With dependencies:** Runs only when specified dependencies change.
