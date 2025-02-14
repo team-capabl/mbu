@@ -29,6 +29,13 @@ export const getProductCategories = async () => {
 
 // TODO: Create another api for fetching products by category
 // Eg: https://fakestoreapi.com/products/category/{category}
+// TODO: Create another api for fetching products by category
+// Eg: https://fakestoreapi.com/products/category/{category}
 export const getProductsByCategory = async (category) => {
-  
+  const response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+  if (response.status === 200) {
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
 }
