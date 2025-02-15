@@ -40,11 +40,11 @@ function App() {
       <CounterWithState />
       {/* <TaskCreator /> */}
       {/* <CounterWithState title="New Component" desc="Good Component" /> */}
-      <Dummy />
+      {/* <Dummy /> */}
       {/* Create new file named Sample.jsx and add button inside that saying Hello */}
       {/* Call that component inside App.jsx */}
 
-      {/* <ProductsList /> */}
+      <ProductsList />
     </>
   );
 }
