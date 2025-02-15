@@ -20,6 +20,8 @@ import Counter from "./Counter";
 import CounterWithState from "./CounterWithState";
 import ProductsList from "./ProductsList";
 import TaskCreator from "./TaskCreator";
+import Dummy from "./Dummy";
+
 // import ProfileCard from "./ProfileCard";
 
 function App() {
@@ -37,9 +39,12 @@ function App() {
       {/* <Counter /> *}
       <CounterWithState />
       {/* <TaskCreator /> */}
-      {/* <CounterWithState /> */}
+      {/* <CounterWithState title="New Component" desc="Good Component" /> */}
+      <Dummy />
+      {/* Create new file named Sample.jsx and add button inside that saying Hello */}
+      {/* Call that component inside App.jsx */}
 
-      <ProductsList />
+      {/* <ProductsList /> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProductCategories, getProducts } from "./api";
+import { getProductCategories, getProducts, getProductsByCategory } from "./api";
 import { ProductCard } from "./ProductCard/ProductCard";
 import { Input } from "./components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "./components/ui/select";
@@ -22,9 +22,29 @@ const ProductsList = () => {
     setCategories(data)
   }
 
+  const fetchProductByCategoryData = async (category) => {
+    // Call the new api which you created
+    const data = await getProductsByCategory(category);
+    setProducts(data)
+  }
+  
+  useEffect(() => {
+
+    fetchProductByCategoryData(selectedCategory);
+  }, [selectedCategory]);
+
+
+  
+  // useEffect(()=>{
+
+  //   console.log("CHANGED");
+
+  // },[products])
+
+
   useEffect(() => {
     fetchProductsData();
-    fetchCategoryData()
+    fetchCategoryData();
   }, []); //Component Did Mount
 
   // console.log(categories);
@@ -48,7 +68,7 @@ const ProductsList = () => {
       />
 
       <Select onValueChange={(selectedVal) => {
-        setSelectedCategory(selectedVal)
+        setSelectedCategory(selectedVal);
       }}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Select a category" />
