@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import {getProductById} from "./api"
 
 const ProductDetails = () => {
     const params = useParams();
+    
+    const [productDetails, setProductDetails] = useState();
     const id = params.id;
     // useEffect with empty dependency array
 
