@@ -142,6 +142,7 @@ Output: 7 (subarray = [4, -1, -2, 1, 5])
     - Create wireframes for the pages using tools like [Excalidraw](https://excalidraw.com/). Check how to create wireframes using excalidraw - https://youtu.be/O1Kqxw07VWM?si=haeIhc4jB-sxYlcU
     - Collect the sample data.
     - Compile all the above details into a PDF and submit it for approval to proceed with the next steps.
+      Submit to the prototype to these emails(vinith1142@gmail.com, pavanbangar80@gmail.com)
     - Split up the work with your team members.
 
 ---
