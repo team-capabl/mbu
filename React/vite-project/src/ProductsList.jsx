@@ -21,7 +21,7 @@ const ProductsList = () => {
     const data = await getProductCategories();
     setCategories(data)
   }
-
+  
   // const fetchProductByCategoryData = async (category) => {
   //   // Call the new api which you created
   //   const data = await getProductsByCategory(category);
@@ -54,12 +54,22 @@ const ProductsList = () => {
 
   // Use Effect Without Dependency
   // This function will get called first time when our Component is loaded
+  const fetchProductByCategoryData = async (category) => {
+    // Call the new api which you created
+    const data = await getProductsByCategory(category);
+    setProducts(data)
+  }
+
   useEffect(() => {
 
     console.log("I wil get called only first time");
     fetchProductsData();
     fetchCategoryData();
   }, []); //Component Did Mount
+
+  useEffect(() => {
+    fetchProductByCategoryData(selectedCategory);
+  }, [selectedCategory]); //Runs whenever selectedCategory state changes
 
   // console.log(categories);
 
