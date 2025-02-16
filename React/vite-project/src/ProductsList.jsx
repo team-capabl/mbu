@@ -97,7 +97,6 @@ const ProductsList = () => {
           </SelectContent>
         </SelectTrigger>
       </Select>
-
       <div className="grid grid-cols-5 gap-4 p-2">
         {filteredProducts.map((product) => {
           return (

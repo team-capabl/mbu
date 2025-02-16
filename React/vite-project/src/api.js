@@ -39,6 +39,15 @@ export const getProductsByCategory = async (category) => {
   }
 }
 
+export const getProductById = async (id) => {
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  if (response.status === 200) {
+    const data = await response.json();
+    // console.log(data);
+    return data;
+  }
+}
+
 export const getProductForMeUsingCategory = async (category) => {
 
   console.log(`I received category ${category}`);
