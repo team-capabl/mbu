@@ -1,15 +1,16 @@
 import { useState } from "react";
 
 function CounterWithState() {
-  const [count, setCount] = useState(0);
-  console.log("Re-rendering");
 
-  const someTimeConsumingFunction = async () => {
-    setTimeout(() => {
-      console.log("Hello")
-      setCount(count + 1);
-    }, 2000)
-  };
+  const [count, setCount] = useState(0);
+
+
+  // const someTimeConsumingFunction = async () => {
+  //   setTimeout(() => {
+  //     console.log("Hello")
+  //     setCount(count + 1);
+  //   }, 2000)
+  // };
 
   
 
@@ -22,6 +23,14 @@ function CounterWithState() {
         }}
       >
         Increment
+      </button>
+
+      <button
+        onClick={() => {
+          someTimeConsumingFunction();
+        }}
+      >
+        Decrement
       </button>
 
       <button onClick={() => console.log("Clicked")}>Click Me!</button>

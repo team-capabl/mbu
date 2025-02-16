@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProductCategories, getProducts, getProductsByCategory } from "./api";
+import { getProductCategories, getProducts, getProductsByCategory, getProductForMeUsingCategory } from "./api";
 import { ProductCard } from "./ProductCard/ProductCard";
 import { Input } from "./components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "./components/ui/select";
@@ -21,7 +21,39 @@ const ProductsList = () => {
     const data = await getProductCategories();
     setCategories(data)
   }
+  
+  // const fetchProductByCategoryData = async (category) => {
+  //   // Call the new api which you created
+  //   const data = await getProductsByCategory(category);
+  //   setProducts(data)
+  // }
 
+  const categoryUpdateTrigger = async() => {
+    console.log(`Inside Trigger: Category Changed to ${selectedCategory}`);
+    // Call Api and fetch products according to selectedCategory
+   const receivedData = await getProductForMeUsingCategory(selectedCategory);
+   console.log("Received Data",receivedData);
+   setProducts(receivedData);
+  }
+
+    // UseEffect With Dependency
+  // This function will get called whenever selectedCatgory changes
+  useEffect(()=>{
+
+    console.log("INSIDE USE EFFECT");
+    categoryUpdateTrigger();
+
+  },[selectedCategory])
+  
+  // useEffect(() => {
+
+  //   fetchProductByCategoryData(selectedCategory);
+  // }, [selectedCategory]);
+
+
+
+  // Use Effect Without Dependency
+  // This function will get called first time when our Component is loaded
   const fetchProductByCategoryData = async (category) => {
     // Call the new api which you created
     const data = await getProductsByCategory(category);
@@ -29,8 +61,10 @@ const ProductsList = () => {
   }
 
   useEffect(() => {
+
+    console.log("I wil get called only first time");
     fetchProductsData();
-    fetchCategoryData()
+    fetchCategoryData();
   }, []); //Component Did Mount
 
   useEffect(() => {
@@ -43,7 +77,7 @@ const ProductsList = () => {
     return product.title.includes(search);
   });
 
-  console.log(selectedCategory)
+  // console.log(selectedCategory)
 
   return (
     <>
@@ -58,7 +92,7 @@ const ProductsList = () => {
       />
 
       <Select onValueChange={(selectedVal) => {
-        setSelectedCategory(selectedVal)
+        setSelectedCategory(selectedVal);
       }}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Select a category" />
@@ -73,7 +107,6 @@ const ProductsList = () => {
           </SelectContent>
         </SelectTrigger>
       </Select>
-
       <div className="grid grid-cols-5 gap-4 p-2">
         {filteredProducts.map((product) => {
           return (
